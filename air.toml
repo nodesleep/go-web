@@ -1,0 +1,38 @@
+root = "."
+cmd = "go build -o ./tmp/main ."
+bin = "./tmp/main"
+run = "./tmp/main"
+
+[watch]
+  includes = [
+    "handlers/*.go",
+    "templates/*.html",
+    "*.go"
+  ]
+
+[watch.exclude]
+  dirs = [
+    "tmp",
+    "static",
+    "vendor"
+  ]
+
+[color]
+  main = "magenta"
+  watcher = "yellow"
+  builder = "cyan"
+  runner = "green"
+
+[log]
+  level = "info"
+  color = true
+
+[clean]
+  include = [
+    "./tmp"
+  ]
+  exclude = []
+
+[misc]
+  clearLog = true
+  clearScreen = true
